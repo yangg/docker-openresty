@@ -13,5 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      working-directory: ./alpine
-      run: docker build . --file Dockerfile.compress --tag openresty:$(date +%s)
+      run: docker build . --file alpine/Dockerfile.compress --tag openresty:$(date +%s)
